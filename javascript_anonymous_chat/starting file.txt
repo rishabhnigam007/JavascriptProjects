@@ -1,0 +1,4 @@
+code --disable-gpu
+
+// for terminal blank 
+// open command prompt and type this
