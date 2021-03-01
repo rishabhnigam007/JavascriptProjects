@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login RentOn</title>
+  
+ 
+ <link rel="stylesheet" href="regcss.css">
+
+  
+</head>
+
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+<form name="registration" id="regid" onsubmit="return valid()" method="post">
+<div class='login'>
+  <h2 style="margin-top:70px;">Login page</h2>
+  
+  <input id="emailid" name='email' placeholder='E-Mail Address' type='text' autocomplete="off" style="color: #fff;" />
+  <span id="emailspan"></span>
+  
+  <input id='pwid' name='password' placeholder='Enter Password' type='password' autocomplete="off" style="color: #fff;" />
+  <span id="pwspan"></span>  
+  
+  <div class='agree'>
+    <input id='agree' name='agree' type='checkbox'>
+  </div>
+  <input class='animated' type='submit' value='Login' style="color:#fff; font-size:20px; font-family:Times New Roman, Times, serif;">
+  <a class='forgot' href='otp.htm' style="color:#fff; font-size:20px; font-family:Georgia, Times, serif;">Forgot password ?</a>
+</div>
+</form>
+<script type"text/javascript">
+	function valid()
+	{
+		var email=document.getElementById("emailid").value;
+		var pow=document.getElementById("pwid").value;
+		if(email.indexOf('@')<=0)
+		{
+			document.getElementById("emailspan").innerHTML="Please enter a valid Email Id";
+			return false;
+		}
+		if((email.lastIndexOf('.')!=email.length-4)&&(email.lastIndexOf('.')!=email.length-3))
+		{
+			document.getElementById("emailspan").innerHTML="Please enter a valid Email Id";
+			return false;
+		}
+		document.getElementById("emailspan").innerHTML="";
+		if(pw.length<6)
+		{
+			document.getElementById("pwspan").innerHTML="Password length must be atleast 6 characters";
+			return false;
+		}
+		if(pw.length>30)
+		{
+			document.getElementById("pwspan").innerHTML="Password length must be maximum 30 characters";
+			return false;
+		}
+		document.getElementById("pwspan").innerHTML="";
+	}
+</script>
+
+</body>
+</html>
